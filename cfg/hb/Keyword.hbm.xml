@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <!-- table created by: CREATE TABLE KEYWORDS ( ID IDENTITY, NAME VARCHAR(25) ); -->
+  <class name="hb.Keyword" 
+         table="keywords">
+        
+    <id name="id" 
+        type="integer"
+        column="id">
+      <generator class="identity"/>
+    </id>
+        
+    <property name="name" 
+              column="NAME" 
+              not-null="true" 
+              unique="true"
+              />
+  </class>
+</hibernate-mapping> 
+
+<!-- $Id: Keyword.hbm.xml,v 1.2 2005-03-19 04:54:53 laufer Exp $ -->
